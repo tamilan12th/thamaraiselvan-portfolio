@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mechatronics Engineering Portfolio | Interview Prep</title>
+<style>
+  /* Base Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #0a1e2f, #162b3a 80%);
+    color: #cbd5e1;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+
+  a {
+    color: #38bdf8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a:hover,
+  a:focus {
+    color: #fb923c;
+    outline: none;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+
+  /* Container */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* Header */
+  header#home {
+    background: linear-gradient(90deg, #0b1f33dd, #163147dd);
+    padding: 32px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 0.6);
+  }
+
+  .hero-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .profile-pic-large {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 25px #fb923caa;
+    border: 3px solid #38bdf8;
+    animation: slowSpin 40s linear infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes slowSpin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .hero-text {
+    flex: 1 1 320px;
+    color: #f1f5f9;
+    text-align: left;
+  }
+
+  .hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    background: linear-gradient(90deg, #fb923c, #38bdf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero-text p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: #94a3b8;
+  }
+
+  .btn {
+    background-color: #fb923c;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: #1e293b;
+    cursor: pointer;
+    margin-top: 24px;
+    box-shadow: 0 8px 12px rgb(251 146 60 / 0.5);
+    transition: background-color 0.3s ease, transform 0.25s ease, box-shadow 0.3s ease;
+  }
+
+  .btn:hover,
+  .btn:focus {
+    background-color: #38bdf8;
+    color: #f1f5f9;
+    box-shadow: 0 14px 24px rgb(56 189 248 / 0.6);
+    transform: scale(1.05);
+    outline: none;
+  }
+
+  /* Sections */
+  section {
+    padding: 56px 0;
+    position: relative;
+  }
+
+  section > h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    text-align: center;
+    color: #fb923c;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: relative;
+  }
+
+  section > h2::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 4px;
+    margin: 8px auto 0 auto;
+    background: #38bdf8;
+    border-radius: 2px;
+  }
+
+  section > p.lead {
+    max-width: 640px;
+    margin: 0 auto 48px auto;
+    font-size: 1rem;
+    color: #94a3b8;
+    text-align: center;
+  }
+
+  /* About Section */
+  #about p {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #cbd5e1;
+  }
+
+  /* Project List */
+  #projects ul {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  #projects li {
+    background: #1e293b;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgb(59 130 246 / 0.3);
+    padding: 24px 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  #projects li:hover,
+  #projects li:focus-within {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 14px 35px rgb(251 146 60 / 0.6);
+  }
+
+  #projects h3 {
+    color: #fb923c;
+    font-size: 1.375rem;
+    font-weight: 700;
+  }
+
+  #projects p {
+    flex-grow: 1;
+    color: #94a3b8;
+  }
+
+  /* Certificates Section */
+  #certificates ul {
+    list-style: none;
+    padding-left: 0;
+    max-width: 640px;
+    margin: 0 auto;
+    color: #94a3b8;
+  }
+
+  #certificates li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    padding-left: 24px;
+    position: relative;
+  }
+  #certificates li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #fb923c;
+    font-weight: 700;
+  }
+
+  /* Skills Section */
+  #skills ul {
+    list-style: none;
+    padding-left: 0;
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  #skills li {
+    background: #163247;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #94a3b8;
+    box-shadow: 0 2px 6px rgb(0 0 0 / 0.5);
+    transition: background-color 0.3s ease;
+  }
+
+  #skills li:hover,
+  #skills li:focus {
+    background-color: #fb923c;
+    color: #1e293b;
+    cursor: default;
+  }
+
+  /* Contact Section */
+  #contact ul {
+    list-style: none;
+    padding-left: 0;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #contact li {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  /* Animations for fade and slide on scroll */
+  .fade-slide-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .fade-slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hero-row {
+      flex-direction: column;
+    }
+
+    .hero-text {
+      text-align: center;
+    }
+
+    .profile-pic-large {
+      margin-bottom: 24px;
+    }
+
+    #projects ul {
+      grid-template-columns: 1fr;
+    }
+
+    #skills ul {
+      justify-content: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header id="home">
+  <div class="container hero-row">
+    <img
+      src="https://i.ibb.co/mr4G06mn/IMG-20250510-153330-459-png.webp"
+      alt="Portrait of Thamaraiselvan S V, Mechatronics Engineering student wearing technical glasses in an industrial environment"
+      class="profile-pic-large"
+      aria-label="Photograph of Thamaraiselvan" />
+    <div class="hero-text">
+      <h1>Thamaraiselvan S V</h1>
+      <p>
+        Aspiring Mechatronics Engineer with strong foundations in robotics,
+        automation, control systems, and embedded programming. Preparing for
+        my first interview to showcase my projects and skills with confidence.
+      </p>
+      <button class="btn" onclick="window.location='#projects'">View Projects</button>
+      <br/>
+      <a href="Thamaraiselvan_Mechatronics engineer.pdf" class="btn" download style="background:#38bdf8; margin-top:12px;">Download Resume</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="about" class="fade-slide-up">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate and detail-oriented Mechatronics Engineering student skilled
+      in designing autonomous robots, embedded IoT devices, and performing real-time
+      data analysis. My projects emphasize practical applications and innovative problem solving.
+    </p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:thamaraits4851@gmail.com">thamaraits4851@gmail.com</a></li>
+      <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/thamaraiselvan-s-v-414b0629b" target="_blank" rel="noopener">Thamaraiselvan S V</a></li>
+      <li><strong>WhatsApp:</strong> <a href="https://wa.me/919443771168" target="_blank" rel="noopener">+91 9443771168</a></li>
+    </ul>
+  </section>
+
+  <section id="projects" class="fade-slide-up">
+    <h2>Project</h2>
+    <ul>
+      <li tabindex="0" aria-label="Autonomous Robot Project">
+        <h3>Agricultural Soil Nutrition NPK Auto-Sprayer</h3>
+        <ul>
+          <li>Built a rover-type robot that moves autonomously across the field.</li>
+          <li>Embedded with IoT-enabled NPK and moisture sensors for real-time analysis.</li>
+          <li>Automated fertilizer spraying based on live sensor data.</li>
+          <li><a href="https://www.youtube.com/watch?v=0hguLk5SO54" target="_blank" rel="noopener">Watch Project Video</a></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+
+  <section id="certificates" class="fade-slide-up">
+    <h2>Certificates</h2>
+    <ul>
+      <li>Automation & Control system Internship at AAVIN PLANT, Salem <a href="https://drive.google.com/file/d/1FpKf-Kwm-xpzvcMhfumSrljEmecgUin2/view?usp=sharing" target="_blank" rel="noopener">- View Certificate</a> (August 2024)</li>
+      <li>Technical Trainer – Arduino: <a href="https://drive.google.com/file/d/1MxaZquH8L6LPiIUa5OrSMvto6ZEcoeVy/view" target="_blank" rel="noopener">- View Certificate</a> (March 2025)</li>
+      <li>Robotics – GUVI: <a href="https://www.guvi.in/share-certificate/37b121H44018O02X4t" target="_blank" rel="noopener">- View Certificate</a> (May 2025)</li>
+      <li>PLC Programming – GUVI: <a href="https://www.guvi.in/verify-certificate?id=6940Tq41O1iQ6CS872" target="_blank" rel="noopener">- View Certificate</a> (June 2025)</li>
+    </ul>
+  </section>
+
+  <section id="skills" class="fade-slide-up">
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Embedded Systems:</strong> Arduino, Microcontrollers</li>
+      <li><strong>Programming & Automation:</strong> Python, PLC (Ladder & ST), Codesys</li>
+      <li><strong>Simulation & Tools:</strong> TinkerCAD, Microsoft Office</li>
+      <li><strong>Area of Interest:</strong> Industrial Automation, Control Systems, AI Integration, EV Tech</li>
+    </ul>
+  </section>
+
+  <section id="contact" class="fade-slide-up">
+    <h2>Contact</h2>
+    <ul>
+      <li><a href="mailto:thamaraits4851@gmail.com">thamaraits4851@gmail.com</a></li>
+      <li><a href="https://wa.me/919443771168" target="_blank" rel="noopener">Chat on WhatsApp</a></li>
+      <li><a href="https://linkedin.com/in/thamaraiselvan-s-v-414b0629b" target="_blank" rel="noopener">Thamaraiselvan S V on LinkedIn</a></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p style="color:#64748b; text-align:center; padding-bottom:32px;">
+    &copy; 2025 Thamaraiselvan S V
+  </p>
+</footer>
+
+<script>
+  // Animate sections on scroll: fade-slide-up
+  const sections = document.querySelectorAll(".fade-slide-up");
+
+  const observerOptions = {
+    threshold: 0.15,
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach((section) => {
+    observer.observe(section);
+  });
+
+  // Focus style accessibility for keyboard navigation on project cards
+  const projectItems = document.querySelectorAll("#projects li");
+  projectItems.forEach((item) => {
+    item.addEventListener("focus", () => {
+      item.classList.add("visible");
+    });
+    item.addEventListener("blur", () => {
+      item.classList.remove("visible");
+    });
+  });
+</script>
+
+</body>
+</html>
+
