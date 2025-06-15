@@ -1,0 +1,22 @@
+{
+  "name": "thamaraiselvan-portfolio",
+  "version": "1.0.0",
+  "description": "Mechatronics Engineer Portfolio Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve . -p 3000",
+    "start": "npx serve . -p 3000",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": [
+    "portfolio",
+    "mechatronics",
+    "engineering",
+    "robotics"
+  ],
+  "author": "Thamaraiselvan S V",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
