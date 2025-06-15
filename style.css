@@ -110,7 +110,7 @@ body {
 
 /* Hero Section */
 .hero {
-  min-height: 100vh;
+  min-height: 80vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -177,12 +177,12 @@ body {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1.2fr;
   gap: 4rem;
   align-items: center;
 }
@@ -229,7 +229,7 @@ body {
 }
 
 .hero-title {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.2;
@@ -244,7 +244,7 @@ body {
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-bottom: 1rem;
   color: var(--secondary-color);
   font-weight: 500;
