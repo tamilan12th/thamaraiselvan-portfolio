@@ -744,10 +744,6 @@ body {
     text-align: center;
   }
   
-  .hero-text {
-    order: -1;
-  }
-  
   .hero-title {
     font-size: 3rem;
   }
@@ -779,16 +775,45 @@ body {
     left: 0;
   }
   
+  /* Mobile Hero Layout - Keep profile picture and text side by side */
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .mobile-hero-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .profile-section {
+    flex-shrink: 0;
+  }
+  
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
+  
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    text-align: left;
+    margin-bottom: 0.5rem;
   }
   
   .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
+    text-align: left;
   }
   
   .hero-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 1rem;
   }
   
   .hero-buttons {
@@ -832,13 +857,23 @@ body {
 }
 
 @media (max-width: 480px) {
+  .mobile-hero-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
   .hero-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  
+  .hero-subtitle {
+    text-align: center;
   }
   
   .profile-pic {
-    width: 180px;
-    height: 180px;
+    width: 100px;
+    height: 100px;
   }
   
   .stat-item,
