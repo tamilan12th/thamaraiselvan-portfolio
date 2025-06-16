@@ -39,16 +39,11 @@ body {
 .navbar {
   position: fixed;
   top: 0;
-  left: 0;
-  height: 100vh;
-  width: 220px;
+  width: 100%;
   background: rgba(26, 26, 46, 0.95);
   backdrop-filter: blur(10px);
   z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 1rem;
+  transition: all 0.3s ease;
 }
 
 .nav-container {
@@ -61,8 +56,9 @@ body {
   height: 30px;
 }
 
-.nav-logo {
-  margin-bottom: 2rem;
+.nav-menu {
+  display: flex;
+  gap: 1.8rem;
 }
 
 .nav-menu {
