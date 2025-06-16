@@ -315,8 +315,10 @@ body {
 
 .social-links {
   display: flex;
-  gap: 1rem;
-  align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .social-link {
