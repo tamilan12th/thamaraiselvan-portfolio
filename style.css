@@ -371,11 +371,12 @@ body {
 /* About Section */
 .about-content {
   max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
 .about-description {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   line-height: 1.8;
   margin-bottom: 3rem;
   text-align: justify;
