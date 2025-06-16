@@ -371,7 +371,6 @@ body {
 /* About Section */
 .about-content {
   max-width: 800px;
-  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -380,7 +379,7 @@ body {
   line-height: 1.8;
   margin-bottom: 3rem;
   text-align: justify;
-  color: var(--text-light);
+  color: black;
 }
 
 .stats-grid {
