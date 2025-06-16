@@ -56,15 +56,15 @@ body {
   height: 30px;
 }
 
-.nav-menu {
-  display: flex;
-  gap: 1.8rem;
+.nav-logo span {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
 }
 
 .nav-menu {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.8rem;
 }
 
 .nav-link {
@@ -314,10 +314,7 @@ body {
 
 .social-links {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+  gap: 1rem;
 }
 
 .social-link {
@@ -381,7 +378,7 @@ body {
   font-size: 1.2rem;
   line-height: 1.8;
   margin-bottom: 3rem;
-  text-align: justify;
+  text-align: center;
   color: var(--text-light);
 }
 
