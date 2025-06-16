@@ -385,7 +385,7 @@ body {
   font-size: 1.2rem;
   line-height: 1.8;
   margin-bottom: 3rem;
-  text-align: center;
+  text-align: justify;
   color: var(--text-light);
 }
 
